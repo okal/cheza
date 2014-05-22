@@ -1,3 +1,5 @@
+import pygame
+
 from mutagen.easyid3 import EasyID3
 from pydub import AudioSegment
 
@@ -16,7 +18,9 @@ class Player:
         return meta
 
     def play(self):
-        pass
+        pygame.init()
+        pygame.mixer.music.load(self.mp3_file)
+        pygame.mixer.music.play()
 
     def pause(self):
         pass
