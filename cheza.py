@@ -37,6 +37,3 @@ class Song:
         self.pygame.mixer.stop()
         print "Kwaheri :-("
         sys.exit(0)
-
-    def quit(self):
-        pass
