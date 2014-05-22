@@ -8,6 +8,8 @@ class Song:
     def __init__(self, mp3_file):
         self.mp3_file = mp3_file
         self.duration = AudioSegment.from_mp3(mp3_file).duration_seconds
+        self.pygame = pygame
+        self.pygame.init()
 
     def get_metadata(self):
         items = EasyID3(self.mp3_file).items()
@@ -18,9 +20,8 @@ class Song:
         return meta
 
     def play(self):
-        pygame.init()
-        pygame.mixer.music.load(self.mp3_file)
-        pygame.mixer.music.play()
+        self.pygame.mixer.music.load(self.mp3_file)
+        self.pygame.mixer.music.play()
 
     def pause(self):
         pass
