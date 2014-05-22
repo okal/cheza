@@ -4,7 +4,7 @@ from mutagen.easyid3 import EasyID3
 from pydub import AudioSegment
 
 
-class Player:
+class Song:
     def __init__(self, mp3_file):
         self.mp3_file = mp3_file
         self.song_duration = AudioSegment.from_mp3(mp3_file).duration_seconds
