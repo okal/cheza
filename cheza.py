@@ -24,7 +24,8 @@ class Song:
         self.pygame.mixer.music.play()
 
     def pause(self):
-        pass
+        self.pygame.mixer.music.pause()
+        self.paused = True
 
     def quit(self):
         pass
