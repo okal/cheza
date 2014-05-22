@@ -9,6 +9,7 @@ class Song:
         self.mp3_file = mp3_file
         self.duration = AudioSegment.from_mp3(mp3_file).duration_seconds
         self.pygame = pygame
+        self.paused = None
         self.pygame.init()
 
     def get_metadata(self):
