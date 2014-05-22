@@ -1,4 +1,5 @@
 import pygame
+import sys
 
 from mutagen.easyid3 import EasyID3
 from pydub import AudioSegment
@@ -31,6 +32,11 @@ class Song:
     def unpause(self):
         self.pygame.mixer.music.unpause()
         self.paused = False
+
+    def stop(self):
+        self.pygame.mixer.stop()
+        print "Kwaheri :-("
+        sys.exit(0)
 
     def quit(self):
         pass
