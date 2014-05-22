@@ -41,6 +41,11 @@ class Song:
         self.pygame.mixer.stop()
         sys.exit(0)
 
+    def toggle_pause(self):
+        if not self.paused:
+            self.pause()
+        else:
+            self.unpause()
 
 if __name__ == '__main__':
     song_file = sys.argv[1]
